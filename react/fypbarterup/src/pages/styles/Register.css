@@ -1,0 +1,23 @@
+.register-section {
+    background-color: #f8f9fa; 
+    margin-top: 30px;
+    padding-top: 20px;
+  }
+
+  /* 
+  .form-container {
+    background-color: white; 
+    padding: 20px; /* Padding around the form */
+    /* border-radius: 8px; Rounded corners */
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Subtle shadow for depth */
+  /* }  */
+   
+  
+  .input-field {
+    margin-bottom: 15px; /* Space between fields */
+  }
+  
+  .input-field input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and label */
+  }
+  

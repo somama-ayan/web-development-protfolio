@@ -1,0 +1,18 @@
+.about-sections{
+
+}
+ .our-vision, .our-mission, .our-story{
+    background-color: rgb(48, 48, 48);
+    color: rgb(229, 229, 229);
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+} 
+
+.what-we-offer{
+   /* background-color: white; */
+   box-shadow: -1px 1px 5px rgba(235, 235, 235, 0.75), 1px -1px 5px rgba(235, 235, 235, 0.702);
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}

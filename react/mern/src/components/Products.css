@@ -1,0 +1,30 @@
+.cardsImage{
+    width: 150px;
+    height: 150px;
+    
+}
+
+.prodCards{
+    /* width: 100; */
+    /* height: 350px;  */
+     /* padding: 20px; */
+    /* margin: 20px; */
+    /* padding-bottom: 30px; */
+}
+.cardsHeading{
+   /* height: 30px; */
+   /* text-overflow: hidden;  */
+   margin-bottom: 10px;
+}
+.cardsText{
+   height: 20px;
+   text-overflow: hidden;
+    margin-top: 10px;
+    color: red;
+}
+.cardsDescription{
+    height: 50px;
+    overflow: hidden;
+    padding-bottom: 90px;
+}
+

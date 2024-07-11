@@ -1,0 +1,52 @@
+.whole-component{
+    width: 300px;
+    background-color: rgb(171, 171, 171);
+}
+.whole-component:hover {
+    box-shadow: 4px 4px 20px 0 rgba(8, 8, 8, 0.2) inset, 4px 4px 20px 0 rgba(5, 5, 5, 0.19);
+
+}
+.button-col{
+   padding: 15px;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   margin-left: 10px;
+   margin-right: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(137, 137, 202, 0.8);
+    border-radius: 100px;
+}
+.button-op{
+
+    padding: 15px;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   margin-left: 10px;
+   margin-right: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(14, 14, 80, 0.8);
+    border-radius: 80px;
+}
+.button-clears{
+    width: 220px;
+    
+    background-color: rgb(50, 47, 47);
+}
+.button-col:hover {
+    background-color: rgb(101, 101, 100);
+    color: white;
+  }
+  .button-op:hover {
+    background-color: rgb(8, 8, 8);
+    color: white;
+  }
+input{
+    font-size: 18px;
+    
+    font-weight: bold;
+   text-align: end;
+   border: none;
+   
+}
