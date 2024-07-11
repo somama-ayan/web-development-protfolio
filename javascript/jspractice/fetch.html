@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using fetch</title>
+</head>
+
+<body>
+
+    <script>  
+       function loadData(){
+            fetch("https://fakestoreapi.com/products")
+            .then(resp => resp.json())
+            .then(products => {
+                //console.log(products)
+               
+            })
+              
+
+
+
+       }
+    </script>
+
+    <button onclick="loadData()">load products</button>
+</body>
+
+</html>

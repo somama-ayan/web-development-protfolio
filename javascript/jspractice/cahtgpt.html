@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const productsFromServer = () => {
+            return new Promise((resolve, reject) => {
+              const xhttp = new XMLHttpRequest();              
+              console.log("waiting")
+              xhttp.open('GET', 'https://fakestoreapi.com/products');
+                xhttp.onload = () =>{
+                if (xhttp.status === 200 && xhttp.readyState === 4) {
+                  const resp = xhttp.responseText;
+                  const products = JSON.parse(resp)
+                  console.log(products)
+                } else {
+                  reject(new Error('Request failed'));
+                }
+              };
+             
+
+              
+             
+              
+              
+              xhttp.send();
+            });
+          }
+          
+          // Async function to use the fetchData function with await
+          async function fetchAndProcessData(){
+            console.log("stand stil")
+            await productsFromServer();
+
+          }
+          
+          // Call the async function
+          fetchAndProcessData();
+    </script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Product Landing Page</title>
+    <link rel="stylesheet" href="landingPage.css">
+</head>
+<header id="header">
+    <!--story 1 
+    header element with corrosponding #header-->
+    <!--story 2
+    image with id header-img-->
+
+    <img id="header-img" src="https://cdn.ourcodeworld.com/public-media/articles/articleocw-5d07e6b3790af.jpg"
+        alt="coding image" width="300px" height="auto">
+
+    <!--story 3
+within header nav with id-->
+    <nav id="nav-bar">
+        <!--story 4 
+            3 links with class nav-link-->
+        <ul>
+            <li><a class="nav-link" href="#coding">Coding</a></li>
+            <li><a class="nav-link" href="#demo-form">Demo form</a></li>
+            <li><a class="nav-link" href="#about-us">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+<hr>
+
+<body>
+    <div>
+        <!--story 6 
+        video with id video-->
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/eNyGq-k1Jno"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <br>
+    <div class="sign-up">
+        <!--story 7 and 12 
+        form with id form   email is submitted to a link given-->
+        <form id="form" action=" https://www.freecodecamp.com/email-submit">
+            <!--story 8
+            emial with id email
+        story 9
+        email should have placeholder-->
+
+            <h2>sign up here</h2>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="@gmial.com" id="email" required>
+
+            <!--story 11 
+            submit button with id submit-->
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+    <div class="coding" id="coding">
+        <img class="coding"
+            src="https://images.unsplash.com/photo-1580927752452-89d86da3fa0a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=750&q=80"
+            alt="laptop image">
+    </div>
+
+    <style>
+        /*-- story 
+   first head having #title */
+        #title {
+            box-shadow: 0px 0px 5px 5px rgb(199, 181, 181);
+
+            font-size: 40px;
+            font-family: monospace;
+            font-weight: 800;
+            text-shadow: 0px 0px 3px rgb(110, 82, 175), 0px 0px 5px rgb(255, 31, 31);
+            padding: 20px;
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+
+
+
+        
+        /* story 
+ p tag with #description */
+
+        #description {
+            box-shadow: 0px 0px 5px 5px rgb(199, 181, 181);
+
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: 300;
+            text-justify: justify;
+            padding: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        #survey-form {
+            box-shadow: 0px 0px 5px 5px rgb(199, 181, 181);
+
+
+            padding: 20px;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        #name,
+        #email,
+        #number,
+        #dropdown,
+        #gender-male,
+        #gender-female {
+            font-family: monospace;
+            padding: 5px 10px 5px 10px;
+        }
+
+        #name-label,
+        #email-label,
+        #number-label,
+        #friends-label,
+        #gender,
+        #gender,
+        #class,
+        #textarea,
+        #submit {
+            font-size: 18px;
+            padding: 10px;
+            margin-right: -3px;
+        }
+
+        @media(max-width: 420px) {
+            #textarea {
+                font-display: block;
+                margin-right: 0px;
+                max-width: 280px;
+                height: auto;
+
+            }
+        }
+
+        .form {
+            font-size: 16px;
+            padding: 8px;
+        }
+    </style>
+
+
+
+    <div class="demo-form" id="demo-form">
+        <h1 id="title">travel trip</h1>
+       <p id="description">
+           To jion us please fill the form.
+       </p>
+        <form id="survey-form">
+            <div class="form">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" id="name" placeholder="plz enter name" required>
+
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="@gmial.com" required>
+
+            </div>
+            <div class="form">
+                <label for="number" id="number-label">Number</label>
+                <input type="number" name="number" id="number" placeholder="enter number" min="1" max="5">
+
+                <label id="friends-label" for="friends">Select friends </label>
+                <select id="dropdown" name="date">
+                    <option value="" placeholder="friends class no">Friends class no</option>
+                    <option value="201301">Class no: 201301</option>
+                    <option value="201302">Class no: 201302</option>
+                    <option value="201303">Class no: 201303</option>
+                    <option value="201304">Class no: 201304</option>
+                    <option value="201305">Class no: 201305</option>
+                    <option value="201306">Class no: 201306</option>
+                    <option value="201307">Class no: 201307</option>
+                    <option value="201308">Class no: 201308</option>
+                    <option value="201309">Class no: 201309</option>
+                    <option value="201310">Class no: 201310</option>
+                    <option value="201311">Class no: 201311</option>
+                    <option value="201312">Class no: 201322</option>
+                    <option value="201313">Class no: 201313</option>
+                    <option value="201314">Class no: 201314</option>
+                    <option value="201315">Class no: 201315</option>
+                </select>
+                <!--
+                <label for="date of birth">Date of Birth</label>
+                <input type="date" id="dropdown" name="date of birth">
+        -->
+            </div>
+            <div class="form">
+                <label id="gender" for="gender-male">Male</label>
+                <input type="radio" id="gender-male" name="gender" value="Male">
+
+                <label id="gender" for="gender-female">Female</label>
+                <input type="radio" id="gender-female" name="gender" value="Female">
+            </div>
+            <!--story 15 
+        checkboxes each having value attribute-->
+            <div class="form">
+                <label id="class" for="class">i am islamian.</label>
+                <input type="checkbox" name="class" value="islamian">
+
+                <label id="class" for="class">i am cs student.</label>
+                <input type="checkbox" name="class" value="cs student">
+
+                <label id="class" for="class">i am in 2<sup>nd</sup> semester.</label>
+                <input type="checkbox" name="class" value="2nd semester">
+            </div>
+            <div class="form">
+                <!--story 16
+           textarea -->
+                <textarea id="textarea" rows="5" cols="50" name="comments">Additional information....</textarea>
+            </div>
+            <div class="form">
+                <!--story 17
+                submit wit #submit-->
+                <button id="submit">Sumbit</button>
+
+            </div>
+        </form>
+    </div>
+
+ 
+
+
+
+
+    <div class="about-us" id="about-us">
+        <h2>
+            About Us
+        </h2>
+        <p>My name is Somama Ayan. I am studying bs computer science at <b>islamia college university peshawar</b>.</p>
+        <p>I am learning web design and after then, I will work on web development INSHA ALLAH.</p>
+    </div>
+</body>
+
+</html>

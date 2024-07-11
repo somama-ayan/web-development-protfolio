@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Document</title>
+  <link rel="stylesheet" href="tecDoc.css">
+</head>
+
+<body>
+  <div class="container">
+    <div>
+     
+    
+    <nav id="navbar">
+      <header>
+    <h1>C++ Basics Document</h1>
+    </header>
+    <ul class="links">
+      <a class="nav-link"href="#Introduction"><li class="links-li">Introduction</li></a>
+      <a class="nav-link"href="#Preprocessor_Directives"><li class="links-li">Preprocessor Directives</li></a>
+      <a class="nav-link"href="#Escape_Sequences"><li class="links-li">Escape Sequences</li></a>
+      <a class="nav-link"href="#Comments"><li class="links-li">Comments</li></a>
+      <a class="nav-link"href="#Integer_Variables"><li class="links-li">Integer Variables</li></a>
+      <a class="nav-link"href="#Floating_Point_Types"><li class="links-li">Floating Point Types</li></a>
+      <a class="nav-link"href="#Type_double_and_long_double"><li class="links-li">Type double and long double</li></a>
+    </ul>
+  </nav>
+  
+           <!--section 1:-->
+   
+  
+           <main id="main-doc">
+    <section class="main-section" id="Introduction">
+      <header>
+        <h1>Introduction</h1>
+      </header>
+      <article class="Introduction-article">
+        <p>
+          In any language there are some fundamentals you need to know before you can write even the most elementary
+          programs. Here we introduce three such fundamentals:basic program construction, variables, and input/output
+          (I/O). It also touches on a variety of other language features, including comments, arithmetic operators, the
+          increment operator and data conversion,
+        </p>
+        <p>
+          Before you learn what it’s all about, a C++ program may remind you more of a mathematics formula than a
+          computer program. Don’t worry about this. You’ll find that as you gain familiarity with C++, it starts to look
+          less forbidding, while other languages begin to seem unnecessarily fancy and verbose.Before you learn what
+          it’s all about, a C++ program may remind you more of a mathematics formula than a computer program. Don’t
+          worry about this. You’ll find that as you gain familiarity with C++, it starts to look less forbidding,while
+          other languages begin to seem unnecessarily fancy and verbose.
+        </p>
+
+      </article>
+    </section>
+
+
+    <section class="main-section" id="Preprocessor_Directives">
+      <!--section 2:-->
+      <header>
+        <h1>Preprocessor Directives</h1>
+      </header>
+      <article class="Preprocessor-Directives-article">
+        <p>
+          The preprocessor directive #include tells the compiler to insert another file into your source
+          file. In effect, the #include directive is replaced by the contents of the file indicated. Using an
+          #include directive to insert another file into your source file is similar to pasting a block of
+          text into a document with your word processor.
+        </p>
+        <p>
+          #include is only one of many preprocessor directives, all of which can be identified by the initial # sign.
+          The use of preprocessor directives is not as common in C++ as it is in C, but we’ll
+          look at a few additional examples as we go along. The type file usually included by #include
+          is called a header file.
+        </p>
+        <h3>Header Files</h3>
+        In the FIRST example, the preprocessor directive #include tells the compiler to add the source
+        file IOSTREAM to the FIRST.CPP source file before compiling. Why do this? IOSTREAM is an example of a header
+        file (sometimes called an include file). It’s concerned with basic input/output
+        operations, and contains declarations that are needed by the cout identifier and the<code><<</code> operator.
+        Without these declarations, the compiler won’t recognize cout and will think <code><<</code> is being used
+        incorrectly. There are many such include files. The newer Standard C++ header files don’t have
+        a file extension, but some older header files, left over from the days of the C language, have
+        the extension .H.
+      </article>
+    </section>
+
+    <!--secton 3 -->
+
+
+    <section class="main-section" id="Escape_Sequences">
+      <header>
+        <h1>Escape Sequences</h1>
+      </header>
+      <article class="Escape-Sequences">
+        <p>
+          This second character constant, ‘\t’, is an odd one. Like ‘\n’, which we encountered earlier,
+it’s an example of an escape sequence. The name reflects the fact that the backslash causes an
+“escape” from the normal way characters are interpreted. In this case the t is interpreted not as
+the character ‘t’ but as the tab character. A tab causes printing to continue at the next tab stop.
+In console-mode programs, tab stops are positioned every eight spaces. Another character constant, 
+‘\n’, is sent directly to cout in the last line of the program.
+        </p>
+        <ul>
+          <li><code>\b    Backspace</code></li>
+          <li><code>\n    Newline</code></li>
+          <li><code>\r    Return</code></li>
+          <li><code>\t    Tab</code></li>
+          <li><code>\\    Backslash</code></li>
+          <li><code>\‘    Single quotation mark</code></li>
+          <li><code>\“    Double quotation marks</code></li>
+        </ul>
+      </article>
+    </section>
+
+
+    <section class="main-section" id="Comments">
+      <header>
+        <h1>Comments</h1>
+      </header>
+      <article class="Comments-article">
+        <p>
+          Comments are an important part of any program. They help the person writing a program, and
+          anyone else who must read the source file, understand what’s going on. The compiler ignores
+          comments, so they do not add to the file size or execution time of the executable program.
+        </p>
+        <p>
+          Comments are almost always a good thing. Most programmers don’t use enough of them. If
+          you’re tempted to leave out comments, remember that not everyone is as smart as you; they
+          may need more explanation than you do about what your program is doing. Also, you may not
+          be as smart next month, when you’ve forgotten key details of your program’s operation, as you
+          are today.
+          Use comments to explain to the person looking at the listing what you’re trying to do. The
+          details are in the program statements themselves, so the comments should concentrate on the
+          big picture, clarifying your reasons for using a certain statement or group of statements.
+        </p>
+        <ul>
+          <li>Comments start with a double slash symbol (//) and terminate at the end of the line.</li>
+          <li>/* this is a potentially very long multiline comment */</li>
+        </ul>
+      </article>
+    </section>
+
+
+
+    <!--section 4:-->
+
+
+    <section class="main-section" id="Integer_Variables">
+      <header>
+        <h1>Integer Variables</h1>
+      </header>
+      <article class="Integer-Variables-article">
+        <p>
+          Variables are the most fundamental part of any language. A variable has a symbolic name and
+          can be given a variety of values. Variables are located in particular places in the computer’s
+          memory. When a variable is given a value, that value is actually placed in the memory space
+          assigned to the variable. Most popular languages use the same general variable types, such as
+          integers, floating-point numbers, and characters, so you are probably already familiar with the
+          ideas behind them.
+          Integer variables represent integer numbers like 1, 30,000, and –27. Such numbers are used for
+          counting discrete numbers of objects, like 11 pencils or 99 bottles of beer. Unlike floatingpoint numbers,
+          integers have no fractional part; you can express the idea of four using integers,
+          but not four and one-half.
+        </p>
+        <h3>Defining Integer Variable</h3>
+        <p>Integer variables exist in several sizes, but the most commonly used is type int. The amount of
+          memory occupied by the integer types is system dependent. On a 32-bit system such as Windows,
+          an int occupies 4 bytes (which is 32 bits) of memory. This allows an int to hold numbers in the
+          range from –2,147,483,648 to 2,147,483,647. Figure 2.3 shows an integer variable in memory.</p>
+        <h3>Declarations and Definitions</h3>
+        <p>
+          Let’s digress for a moment to note a subtle distinction between the terms definition and declaration as
+          applied to variables.
+          A declaration introduces a variable’s name (such as var1) into a program and specifies its type
+          (such as int). However, if a declaration also sets aside memory for the variable, it is also
+          called a definition. The statements<br>
+          <code>int var1;</code><br>
+          <code>int var2;</code><br>
+          in the INTVARS program are definitions, as well as declarations, because they set aside memory
+          for var1 and var2. We’ll be concerned mostly with declarations that are also definitions, but
+          later on we’ll see various kinds of declarations that are not definitions.
+        </p>
+      </article>
+    </section>
+
+
+
+    
+
+
+    <!--section 5:-->
+
+
+    <section class="main-section" id="Floating_Point_Types">
+      <header>
+        <h1>Floating Point Types</h1>
+      </header>
+      <article class="Floating-Point-Types-article">
+        <p>
+          We’ve talked about type int and type char, both of which represent numbers as integers—that
+          is, numbers without a fractional part. Now let’s examine a different way of storing numbers—
+          as floating-point variables.
+          Floating-point variables represent numbers with a decimal place—like 3.1415927, 0.0000625,
+          and –10.2. They have both an integer part, to the left of the decimal point, and a fractional part,
+          to the right. Floating-point variables represent what mathematicians call real numbers, which
+          are used for measurable quantities such as distance, area, and temperature. They typically have
+          a fractional part.
+          There are three kinds of floating-point variables in C++: type float, type double, and type
+          long double. Let’s start with the smallest of these, type float.
+        </p>
+      </article>
+    </section>
+
+
+    <!--section 6-->
+    <section class="main-section" id="Type_double_and_long_double">
+      <header>
+        <h1>Type double and long double</h1>
+      </header>
+      <article class="Type-double-and-long-double">
+        <p>
+          The larger floating point types, double and long double, are similar to float except that they
+          require more memory space and provide a wider range of values and more precision. Type
+          double requires 8 bytes of storage and handles numbers in the range from 1.7x10–308 to
+          1.7x10308 with a precision of 15 digits. Type long double is compiler-dependent but is often
+          the same as double.
+        </p>
+      </article>
+    </section>
+
+  </main>
+  </div>
+  </div>
+
+</body>
+
+</html>

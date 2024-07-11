@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>using async</title>
+</head>
+
+<body>
+
+    <!-- <script>
+
+        const one = () => {
+            setTimeout(() => {
+                console.log("one")
+            },5000)
+        }
+        const two = () => {
+            setTimeout(() => {
+                console.log("two")
+            },2000)
+        }
+        const three = () => {
+            setTimeout(() => {
+                console.log("three")
+            }, 4000)
+        }
+        one()
+        two()
+        three()
+    </script> -->
+    <!-- callback (Es6) -->
+    <!-- callback (Es6) -->
+    <!-- callback (Es6) -->
+    <!-- <script>
+        const one = (callback) => {
+            setTimeout(() => {
+                console.log("one")
+                callback()
+            },5000)
+        }
+        const two = (callback) => {
+            setTimeout(() => {
+                console.log("two")
+                callback()
+            },2000)
+        }
+        const three = (callback) => {
+            setTimeout(() => {
+                console.log("three")
+                callback()
+            },4000)
+        }
+
+        one(() => {
+            two(() => {
+                three(() => {
+                    console.log("done")
+                })
+            })
+        })
+       
+    </script> -->
+
+                                                                        <!-- promise  -->
+                                                                        <!-- promise  -->
+                                                                        <!-- promise  -->
+<!-- 
+     <script>
+        
+       const one = () => {
+        return new Promise((resolve, reject) =>  {
+            setTimeout(() => {
+                console.log('one')
+                resolve()
+            }, 5000)
+        })
+       }
+       const two = () => {
+        return new Promise((resolve, reject) =>  {
+            setTimeout(() => {
+                console.log('two')
+                resolve()
+            }, 2000)
+        })
+       }
+       const three = () => {
+        return new Promise((resolve, reject) =>  {
+            setTimeout(() => {
+                console.log('three')
+                resolve()
+            }, 4000)
+        })
+       }
+
+       const four = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log('four')
+                resolve();
+            }, 1000)
+        })
+    } 
+
+      //const t1 = one()
+      //const t2 = two()
+      //const t3 = three()
+      one().then(() => {
+        two().then(() => {
+            three().then(() => {
+                four().then(() => {
+
+                })
+            })
+        })
+      })
+       
+    </script>  -->
+
+    <!-- <script>
+        // Promises
+const one = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('one')
+            resolve();
+        }, 5000)
+    })
+} 
+
+
+
+
+const five = () => {
+    return new Promise((resolve, reject) =>  {
+        setTimeout(() => {
+            console.log("five")
+            resolve()
+        }, 7000)
+    })
+   }
+
+
+
+
+
+
+
+const two = () => {
+
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('two')
+            resolve();
+        }, 1000)
+    })
+
+
+} 
+const three = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('three')
+            resolve();
+        }, 3000)
+    })
+} 
+
+//This is a smaller hell
+ one().then(() => {
+     two().then(() => {
+         three().then(() => {
+            five().then(() => {
+
+            })
+        })
+     })
+ })
+    </script> -->
+
+
+
+
+                                                                            <!-- // await async -->
+                                                                            <!-- // await async -->
+                                                                            <!-- // await async -->
+                                                                            <!-- // await async -->
+                                                                            <!-- // await async -->
+                                                                            <!-- // await async -->
+
+
+
+<script>
+    const one = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("one")
+                resolve()
+            },5000)
+        })
+    }
+    const two =() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("two")
+                resolve()
+            },2000)
+        })   
+    }
+    const three =() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("three")
+                resolve()
+            },4000)
+        })
+    }
+
+    // await async
+    async function run(){
+       await one()
+       await two()
+       await three()
+    }
+    run()
+</script>
+
+</body>
+
+</html> 

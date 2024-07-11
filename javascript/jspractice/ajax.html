@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get API using ajax</title>
+</head>
+<body>
+        <script>
+            const loadData = () => {
+
+                // step 1
+                // create an XMLHttpRequest object
+                const xhttp = new XMLHttpRequest()
+
+                // step 2
+                // define a callback function
+                xhttp.onreadystatechange = () => {
+                    // inside call back function check that data is completly sent or not 
+                    // && also check that if there is no error
+                    if(xhttp.readyState === 4 && xhttp.status === 200)
+                    {
+                        const resp = xhttp.responseText;
+                        const products = JSON.parse(resp)
+                        console.log(products)
+                    }
+                }
+                // step 3
+                // open the XMLHttpRequest object
+                xhttp.open("get" , "https://fakestoreapi.com/products")
+                // step 4
+                // send XMLTHttpRequest object
+                xhttp.send()
+            }
+        </script>
+        <button onclick="loadData()">load data</button>
+    
+</body>
+</html>

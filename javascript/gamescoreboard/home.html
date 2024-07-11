@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+
+
+    <title>ScoreBoard</title>
+</head>
+
+<body>
+    <div id="all-body">
+        <div class="contanier">
+
+            <div>
+                <h1>HOME</h1>
+                <p id="home-el-p">00</p>
+                <button id="btn1" onclick="point1()">+1</button>
+                <button id="btn2" onclick="point2()">+2</button>
+                <button id="btn3" onclick="point3()">+3</button>
+            </div>
+
+            <div>
+                <h1>GUEST</h1>
+                <p id="guest-el-p">00</p>
+                <button id="btn1" onclick="pointG1()">+1</button>
+                <button id="btn2" onclick="pointG2()">+2</button>
+                <button id="btn3" onclick="pointG3()">+3</button>
+            </div>
+        </div>
+
+        <button id="reset-el" onclick="reset()">RESET</button>
+    </div>
+    <script src="home.js"></script>
+</body>
+
+</html>

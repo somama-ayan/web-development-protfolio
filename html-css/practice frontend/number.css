@@ -1,0 +1,152 @@
+body{
+    background-image: linear-gradient( 180deg, rgba(60, 119, 158, 0.945), rgba(19, 142, 163, 0.589));
+    border-color: brown;
+    border-width: 5px;
+    border-style: solid;
+    border-radius: 0px;
+
+    margin: 0px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+}
+/* class for ist head */ 
+.first-head{
+    background-image: linear-gradient( 180deg, rgba(117, 41, 92, 0.945), rgba(19, 142, 163, 0.589));
+    border-color: rgb(25, 107, 128);
+    border-width: 13px;
+    border-style: solid;
+    border-radius: 0px;
+
+    box-shadow: 0px 0px 5px 5px rgba( 100, 100, 100, 0.9);
+
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 8px;
+        padding-left: 35px;
+        font-size: 26px;
+        font-family: monospace;
+        text-shadow: 0px 0px 5px #b41f1f, 0px 0px 3px #eaf109;
+        
+        margin-top:  -5px;
+        margin-right: -26px;
+        margin-left: -26px;
+}
+
+/* class for tea logo */
+.tea-logo{
+    background-image: linear-gradient( 180deg, rgba(117, 30, 110, 0.945), rgba(19, 142, 163, 0.589));
+    border-color: rgb(25, 107, 128);
+    border-width: 13px;
+    border-style: solid;
+    border-radius: 0px;
+
+    box-shadow: 0px 0px 5px 5px rgba( 100, 100, 100, 0.9);
+    padding: 30px;
+    margin-top: 10px;
+    margin-right: -26px;
+    margin-left: -26px;
+}
+
+/* section css for internal links 
+    inside class of tea-logo */
+
+ section{
+     border-color: darkgray;
+     border-style: solid;
+     background-color: darkgrey;
+
+     height: 100px;
+     width: 225px;
+     margin-bottom: 30px;
+ }   
+ div li{
+    list-style-type: none;
+    background-color: rgb(127, 134, 127);
+    margin-right: 30px;
+    margin-left: -8px;
+    
+    padding-top: 6px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+
+        
+ }
+ div a{
+     text-decoration: none;
+     font-size: 20px;
+     
+ }
+ div a:hover{
+     background-color: rgb(196, 195, 195);
+     font-size: 18px;
+     color: firebrick;
+     padding-right:25px;
+     padding-bottom:10px;
+     padding-left:25px;
+    }
+ 
+    p{
+        font-size: 18px;
+        font-family: sans-serif;
+        line-height: 1.5em;
+    }
+
+/* class of table div */
+.table{
+    background-image: linear-gradient( 180deg, rgba(117, 30, 110, 0.945), rgba(19, 142, 163, 0.589));
+    border-color: rgb(25, 107, 128);
+    border-width: 13px;
+    border-style: solid;
+    border-radius: 0px;
+
+    padding: 30px;
+
+
+    box-shadow: 0px 0px 5px 5px rgba( 100, 100, 100, 0.9);
+    margin-top: 10px;
+    margin-right: -26px;
+    margin-left: -26px;
+}
+
+table{
+    font-size: 16px;
+    border-color: rgb(26, 15, 15);
+    border-width: 4px;
+    border-style: double;
+
+    padding: 20px;
+
+    width: 600px;
+    text-align: center;
+    background-image: linear-gradient( 180deg,rgba(19, 142, 163, 0.589), rgb(62, 122, 231));
+    
+}
+
+
+
+
+/* class of div for link to head css */
+.head-link{
+    background-image: linear-gradient( 180deg,rgba(117, 30, 110, 0.945), rgba(19, 142, 163, 0.589));
+    border-color: rgb(25, 107, 128);
+    border-width: 13px;
+    border-style: solid;
+    border-radius: 0px;
+
+
+    
+    box-shadow: 0px 0px 5px 5px rgba( 100, 100, 100, 0.9);
+
+    padding: 30px;
+    margin-top: 10px;
+    margin-right: -26px;
+    margin-left: -26px;
+    margin-bottom: -5px;
+}
+.head-link a{
+    background-color: lightgrey;
+    font-size: 20px;
+    padding: 15px;
+}

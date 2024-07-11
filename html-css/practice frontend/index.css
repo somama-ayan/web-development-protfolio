@@ -1,0 +1,221 @@
+body{
+    box-shadow: 5px 4px 8px 0px rgba(200, 150, 100, 0.5);
+    background-color: rgba( 0, 0, 0, 0.8);
+    
+}
+.nav{
+    box-shadow: 5px 4px 8px 0px rgba(150, 150, 150, 0.5);
+    
+   
+}
+.nav ul{
+    list-style-type: none;
+    text-align: center;
+   margin: 0px;
+   background-color: slategray;
+   padding-left: 40px;
+   padding-right: 40px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   word-spacing: 100px;
+
+}
+
+.nav li{
+ display: inline-block;
+padding: 10px;
+}
+
+.nav a{
+    display: block;
+    color:seashell;
+    text-decoration: none;
+    width: 100px;
+   
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    background-color:teal ;
+    
+    
+}
+.nav a:hover{
+    font-size: 24px;
+}
+/* heading ist css */
+#top-head{
+    color: white;
+    font-size: 56px;
+    box-shadow: 6px 4px 6px 6px rgba(206, 128, 128, 0.5);
+    padding:30px;
+    text-shadow: 2px 2px 4px rgb(163, 51, 56), 4px 4px 4px rgb(186, 65, 202);
+    background-color: rgba( 0, 0, 0, 0.8);
+
+}
+h1::first-letter{
+    font-size:70px;
+}
+/* second heading css */
+.second-head{
+    color: white;
+    opacity: 0.9;
+    font-size: 38px;
+    box-shadow: 4px 4px 8px 8px rgba(206, 128, 128, 0.5);
+    padding:15px;
+
+    text-shadow: 4px 4px 6px  rgba(241, 91, 91, 0.719),
+    4px 4px 6px rgba(218, 19, 184, 0.849);
+}
+
+/* third headings code */
+.third-head{
+    font-size: 30px;
+    color: white;
+    box-shadow: 4px 4px 6px 6px rgba(179, 45, 45, 0.719);
+    padding: 15px;
+    text-shadow: 2px 2px 6px #FFFFFF;
+    opacity: 0.8;
+    letter-spacing: 4px;
+
+}
+/* tea logo */
+.logo-img{
+    width: 200px;
+    height: 200px;
+   
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+   border-radius: 50%;
+ 
+   text-align: center;
+   margin: 10px;
+   margin-left: 40px;
+
+}
+/* first paragraph logo section code */
+.ist-ptag{
+    color: white;
+    opacity: 0.7;
+    font-size: 18px;
+    word-spacing: 6px;
+}
+
+/* tea types pics code */
+.img-childs{
+   
+    width: 400px;
+    height: 400px;
+    padding: 15px;
+}
+
+/* tea types paragraph code */
+.para-childs{
+  color: white;
+  opacity: 0.7;
+  font-size: 18px;
+  padding: 10px;
+ 
+  word-spacing: 5px;
+    line-height: 25px;
+}
+
+/* back to top link code */
+.inpage-link{
+    color:rgb(241, 252, 245);
+    font-size: 20px;
+    padding: 15px;
+    background-color: rgba(150, 150, 150, 0.5);
+    
+}
+
+
+/*
+.child-of{
+  
+    border: 1px solid black;
+    width: 33%;
+    height: auto;
+    padding: 10px;
+    }
+    
+    .parent-of-sec{
+       display: flex;
+     justify-content: center;
+      
+    }
+    */
+  @media screen and (min-width: 1088px) {
+    .child-of{
+  
+        border: 1px solid black;
+        width: 33%;
+        height: auto;
+        padding: 10px;
+        }
+        
+        .parent-of-sec{
+           display: flex;
+         justify-content: center;
+          
+        }    
+    }
+    /* tea types images resizing class for diffent viewports */
+@media screen and (max-width: 1088px) {
+    .img-childs{
+        max-width: 100%;
+        height: auto;
+        padding: 0px;
+    }
+    /* h1 resize code for mobile view */
+    #top-head{
+        font-size: 36px; 
+        word-spacing: 4px;
+        letter-spacing: 3px;
+    }
+    #top-head::first-letter{
+        font-size: 42px;
+    }
+}
+
+ /* flex-box  code */
+/*
+.child-of{
+  
+border: 1px solid black;
+width: 33%;
+height: auto;
+padding: 10px;
+}
+
+.parent-of-sec{
+   display: flex;
+ justify-content: center;
+  
+}
+*/
+/*
+@media(min-width:768){
+    .child-of{
+  
+        border: 1px solid rgb(165, 98, 98);
+        width: 33%;
+        height: auto;
+        padding: 10px;
+        }
+    .parent-of-sec {
+        display: flex;
+        justify-content: center;
+         
+    }
+}
+*/
+
+
+
+
+

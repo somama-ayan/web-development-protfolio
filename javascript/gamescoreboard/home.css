@@ -1,0 +1,74 @@
+#all-body{
+    background-color: rgb(53, 45, 90);
+    width: 600px;
+    height: 400px;
+}
+.contanier{
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    width: 600px;
+    height: 250px;
+}
+.contanier > div{
+    padding-right: 10px;
+    padding-left: 60px;
+    align-items: center;
+}
+
+h1{
+    color: white;
+    font-size: 46px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    
+}
+
+p{
+    border-radius: 5px;
+    font-size: 90px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* font-family: 'Cursed Timer ULiL', sans-serif; */
+    color: rgb(188, 30, 30);
+    background-color: black;
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    width: 180px;
+    
+    /* padding-bottom: 10px; */
+    
+}
+
+button{
+    border: 1px,solid;
+    border-radius: 5px;
+    font-size: 24px;
+    
+    border-color: rgba(255,255,255,0.9);
+    background-color: rgb(60, 51, 102);
+    color: white;
+    
+     padding: 8px 11px;    
+}
+#btn1,#btn2,#btn3{
+   
+    
+     margin-right: 5px;
+     
+}
+                /* reset button  */
+#reset-el{
+    color:white;
+    border: 1px,solid;
+    border-color: black;
+    background-color: rgb(19, 39, 95);
+    font-size: 20px;
+    position: relative;
+    margin-top: 41px;
+    padding-left: 30px;
+    padding-right: 30px;
+    left: 230px;
+    
+}

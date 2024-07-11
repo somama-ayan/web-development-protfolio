@@ -1,0 +1,70 @@
+body{
+    background-image:url(images/mac.jpg);
+}
+div{
+    background-color: black;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    height: 300px;
+    width: 400px;
+    position: relative;
+    left: 35%;
+
+    
+}
+
+ H1{
+
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+
+ }
+
+ 
+
+
+
+button{
+    border-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    position: relative;
+    left: 110px;
+}
+
+#increment-btn{
+    background-color: darkred;
+}
+#save-btn{
+    background-color: darkgreen;
+}
+#erase-btn{
+    background-color: blue;
+}
+
+p{
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 200px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    position: relative;
+    left: 120px;
+}
+
+#timerP{
+    
+    font-size: x-large;
+    font-size:50pt;
+    height: 150px;
+    width: 130px;
+    background-color: blacks;
+}
