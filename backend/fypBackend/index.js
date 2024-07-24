@@ -17,10 +17,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.use((req, res, next) => {
-  console.log('Request Body:', req.body);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log('Request Body:', req.body);
+//   next();
+// });
 
 const userRegistrationRoute = require("./routes/userRegistration");
 app.use("/api", userRegistrationRoute);
