@@ -17,12 +17,19 @@ const Login = () => {
         },
         onSubmit: (value) => {
             axios.post("http://localhost:3001/api/login",value)
-            .then((result) => {
-            console.log(result)
-            NotificationManager.success(`user ${result.data.email} has been succesfully Loged In`, " " ,3000)
-                  navigate('/home')
+            .then((res) => {
+            console.log(res)
+            // Log the response headers
+    console.log('Response Headers:', res.headers);
+
+    // Log the token from the response headers
+    const token = res.headers.token;
+    console.log('Token:', token);
+            // localStorage.setItem("token", res.headers.token)
+            NotificationManager.success(`user ${res.data.findUser.email} has been succesfully Loged In`, " " ,3000)
+            navigate('/home')
             }).catch((err) => {
-                console.log(err.response.data)
+                console.log(err)
                 // NotificationManager.errors(err , "Error!" , 5000)
             });
         },
