@@ -2,7 +2,7 @@ import React from 'react';
 import { useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup'
-import {NotificationContainer,NotificationManager} from "react-notifications"
+import {NotificationManager} from "react-notifications"
 
 // import isEmailValidator from 'validator/lib/isEmail';
 

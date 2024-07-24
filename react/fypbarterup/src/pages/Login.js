@@ -1,20 +1,30 @@
 import { useFormik } from 'formik'
 import * as yup from 'yup'
+import { useNavigate } from 'react-router-dom'
 
+import { NotificationManager } from 'react-notifications'
 import Email from '@mui/icons-material/Email'
 import Password from '@mui/icons-material/Password'
 import React from 'react'
 import '../pages/styles/Login.css'
+import axios from 'axios'
 const Login = () => {
-    
+    const navigate = useNavigate()
     const formik = useFormik({
         initialValues: {
             email: '',
             password: ''
         },
         onSubmit: (value) => {
-            console.log(value.email)
-            console.log(value.password)
+            axios.post("http://localhost:3001/api/login",value)
+            .then((result) => {
+            console.log(result)
+            NotificationManager.success(`user ${result.data.email} has been succesfully Loged In`, " " ,3000)
+                  navigate('/home')
+            }).catch((err) => {
+                console.log(err.response.data)
+                // NotificationManager.errors(err , "Error!" , 5000)
+            });
         },
         validationSchema: yup.object({
             email: yup
