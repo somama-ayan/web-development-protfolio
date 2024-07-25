@@ -31,6 +31,9 @@ const UserRegist = new mongoose.Schema({
         type: Boolean,
         required: true
     },
+    profilePic: {
+        type: String
+    },
     createdAt: {
         type: Date,
         default: Date.now()
