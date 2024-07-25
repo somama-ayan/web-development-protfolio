@@ -9,8 +9,10 @@ import Product from '../pages/Product'
 import About from '../pages/About'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
+import Logout from '../pages/Logout';
 import Error from '../pages/Error'
-import Profile from './Profile'
+import Userdash from './Userdash';
+
 import { NotificationContainer } from 'react-notifications';
 
 
@@ -29,7 +31,8 @@ const App = () => {
                     <Route path='/about'element={<About />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />}/>
-                    <Route path='/profile' element={<Profile />} />
+                    <Route path='/logout' element={<Logout />}/>
+                    <Route path='/userdash' element={<Userdash />} />
                     <Route path='*' element={<Error />}/>
                 </Routes>
                 { <Footernav /> }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Profile = () => {
+const Dash = () => {
   const [user, setUser] = useState({});
   const [isEditing, setIsEditing] = useState(false);
   const [bio, setBio] = useState('');

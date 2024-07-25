@@ -1,12 +1,10 @@
-.register-section {
-    background-color: #f8f9fa; 
-    margin-top: 1rem;
-    margin-bottom: 10rem;
-    padding-top: 1rem; 
-   
-    
-    
-  }
+.register-section{
+  /* background-color: #f8f9fa; */
+  margin-top: 1rem;
+  padding-top: 1rem;
+  margin-bottom: 10rem;
+  padding-bottom: 1rem;
+}
 
   /* 
   .form-container {
@@ -17,11 +15,11 @@
   /* }  */
    
   
-  .input-field {
-    margin-bottom: 15px; /* Space between fields */
-  }
+    .input-field {
+    margin-bottom: 1rem; /* Space between fields */
+    }  
   
-  .input-field input[type="checkbox"] {
-    margin-right: 10px; /* Space between checkbox and label */
-  }
+  /* .input-field input[type="checkbox"] {
+    margin-right: 1rem; /* Space between checkbox and label */
+   /* }   */
   

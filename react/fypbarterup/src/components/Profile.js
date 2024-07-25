@@ -1,69 +1,64 @@
 import React from 'react'
-import { useState, useRef } from 'react'
+import { useState , useRef } from 'react'
+import defaultImage from './profile.jpg'
 import './Profile.css'
-import pImage from './profile.jpg'
-import Dash from './Dash'
-const Userdhashboard = () => {
+import axios from 'axios'
 
-  const [chImage, setChImage] = useState(null);
-  const inputRef = useRef(null)
-
-  const handleImageClick = () => {
-    inputRef.current.click();
+const Profile = () => {
+  const [imageAvatar, setImageAvatar] = useState(defaultImage)
+  const fileUploadRef = useRef(null)
+ 
+  const handleClick = (event) => {
+    event.preventDefault()
+    fileUploadRef.current.click();
   }
-  const handleImageChange = (e) => {
-    const file = e.target.files[0]
-    console.log(e.target.files[0])
-    setChImage(file)
+  const handlChange = (e) => {
+      console.log(e)
+      console.log(fileUploadRef.current.files[0])
+      const uploadedFile = fileUploadRef.current.files[0]
+      const cacheUrl = URL.createObjectURL(uploadedFile)
+      // setImageAvatar(cacheUrl)
+      console.log(imageAvatar)
+      const userId = localStorage.getItem("_id")
+      
+      axios.put('http://localhost:3001/api/userprofile',{
+        userId: userId,
+        profilePic: cacheUrl
+      }).then((res) => {
+        console.log(res)
+        setImageAvatar(res.data.profilePic)
+      }).catch((err) => {
+        console.log(err)
+      })
   }
-const [bio, setBio] = useState('')
-  
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
   return (
     <div>
-      <div className='container-fluid'>
-        <div className='row'>
-          <div className='col-md-4 sidebar'>
-            <div className="img-cont" onClick={handleImageClick}>
-              {
-                chImage ? (<img className="img-fluid img-thumbnail pImage" src={URL.createObjectURL(chImage)} alt='profile' />) : (<img className="img-fluid img-thumbnail pImage" src={pImage} alt='profile' />)
-              }
-              <input
-                type='file'
-                ref={inputRef}
-                id='choose-image'
-                accept='image/*'
-                onChange={handleImageChange}
-                style={{ "display": "none" }}
-              />
-              {/* <button type='submit'>Upload</button> */}
-              <h5 className='userName'> SomamaAyan</h5>
-            </div>
-            <div
-              className='bio-cont'>
-              <textarea
-              style={{display: 'none'}}
-                rows='3'
-                cols='30'
-                id='bio'
-                placeholder='Add Your Bio ...'
-                onChange={e => setBio(e.target.value)}
-              ></textarea>
-              <p>{bio}</p>
-              
-            </div>
-          </div>
-
-
-
-          <div className='col-md-8 profileMain'>
-            <h1>hello</h1>
-<Dash />
-          </div>
+      <div className='img-cont'>
+      <img src={imageAvatar || defaultImage} 
+        alt='Default-Avatar'
+        onClick={handleClick}
+        />
         </div>
-      </div>
-
+     
+            <form onSubmit={handleSubmit}>
+                <input
+                  type='file'
+                  id='profilePic'
+                  onChange={handlChange}
+                  ref={fileUploadRef} 
+                  hidden
+                />
+                <button type='Submit'
+                >Submit</button>
+            </form>
+      
+       
+      
     </div>
   )
 }
 
-export default Userdhashboard
+export default Profile

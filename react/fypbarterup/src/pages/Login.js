@@ -21,16 +21,15 @@ const Login = () => {
             console.log(res)
             // Log the response headers
     console.log('Response Headers:', res.headers);
-
-    // Log the token from the response headers
-    const token = res.headers.token;
-    console.log('Token:', token);
-            // localStorage.setItem("token", res.headers.token)
-            NotificationManager.success(`user ${res.data.findUser.email} has been succesfully Loged In`, " " ,3000)
-            navigate('/home')
+                const token = res.headers.token
+                localStorage.setItem("token", token)
+                localStorage.setItem("_id", res.data._id)
+                console.log(token)
+                navigate('/home')
+                NotificationManager.success(`${res.data.name} logged in successfully!`,"Success",5000)
             }).catch((err) => {
-                console.log(err)
-                // NotificationManager.errors(err , "Error!" , 5000)
+                // console.log(err.response.data)
+                NotificationManager.error(`${err.response.data}`, 'Error!' , 5000)
             });
         },
         validationSchema: yup.object({
@@ -53,7 +52,7 @@ const Login = () => {
         <section className='login-section'style={{ height: '100vh' }}>
             <h1 className='text-center pb-3'>Log In</h1>
         <div className="container d-flex justify-content-center align-items-center">
-            <div className='col-md-8'>
+            <div className='col-md-6'>
                
                
                 <form onSubmit={formik.handleSubmit} className='form' autoComplete='on'>

@@ -2,8 +2,8 @@ import React from 'react'
 
 const Error = () => {
     return (
-        <div>
-
+        <div className='p-5'>
+i am error 
         </div>
     )
 }

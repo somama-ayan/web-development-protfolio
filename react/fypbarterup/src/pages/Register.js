@@ -82,12 +82,12 @@ const Register = () => {
  }
   return (
     <section className='register-section' style={{ height: '100vh' }}>
-      <h1 className='reghead1 text-center pb-3'>Register</h1>
+      <h1 className='reghead1 text-center'>Register</h1>
       <div className='container d-flex justify-content-center align-items-center'>
         <div className='col-md-6'>
 
           <form onSubmit={(e) => handleSubmit(e)} className='form' autoComplete='on'>
-            <div className='input-field mb-3 d-flex align-items-center'>
+            <div className='input-field d-flex align-items-center'>
               <PersonRoundedIcon className='me-2' />
               <input
                 className='form-control'
@@ -103,7 +103,7 @@ const Register = () => {
              
             </div>
 
-            <div className='input-field mb-3 d-flex align-items-center'>
+            <div className='input-field d-flex align-items-center'>
               <EmailIcon className='me-2' />
               <input
                 className='form-control'
@@ -118,7 +118,7 @@ const Register = () => {
              
             </div>
 
-            <div className='input-field mb-3 d-flex align-items-center'>
+            <div className='input-field d-flex align-items-center'>
               <PasswordIcon className='me-2' />
               <input
                 className='form-control'
@@ -134,7 +134,7 @@ const Register = () => {
               
             </div>
 
-            <div className='input-field mb-3 d-flex align-items-center'>
+            <div className='input-field d-flex align-items-center'>
               <HomeIcon className='me-2' />
               <input
                 className='form-control'
@@ -149,12 +149,12 @@ const Register = () => {
               
             </div>
 
-            <div className='input-field mb-3 d-flex align-items-center'>
+            <div className='input-field d-flex align-items-center'>
               <input
                 type="checkbox"
                 name="terms"
                 id="terms"
-                className='me-2'
+                className='me-3'
                 required
                 checked={terms}
                 onChange={e => setTerms(e.target.checked)}
