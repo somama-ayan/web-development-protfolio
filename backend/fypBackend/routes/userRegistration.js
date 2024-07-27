@@ -3,6 +3,8 @@ const UserRegist = require("../models/UserRegistration");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const userRegValidSchema = require("../middleware/validation");
+const multer = require("multer");
+
 
 ////////////////////////// User Registration /////////////////
 userRegistrationRoute.post("/registration", async (req, res) => {
@@ -40,47 +42,73 @@ userRegistrationRoute.post("/registration", async (req, res) => {
 //////////////////// User Login ///////////////////////////////
 userRegistrationRoute.post("/login", async (req, res) => {
   console.log(`request body:`, req.body)
-  const { email , password} = req.body
+  const { email, password } = req.body
   console.log(`Email: ${email} Password: ${password}`)
 
-  // find user of same email an DB
-  const findUser = await UserRegist.findOne({email: req.body.email})
-  // console.log("user found", findUser)
-  if(!findUser) return res.status(400).send("Email or password is Incorrect!")
-    
-    console.log("user", findUser)
-  // compare login password with db password for user
+
+  const findUser = await UserRegist.findOne({ email: req.body.email })
+  if (!findUser) return res.status(400).send("Email or password is Incorrect!")
+
+
   const comparePassword = await bcrypt.compare(password, findUser.password)
-  if(!comparePassword) return res.status(400).send("Email or password is Incorrect!")
-  console.log("Logged in....!")
+  if (!comparePassword) return res.status(400).send("Email or password is Incorrect!")
 
   // sign jwt token for authorization
-  const token = jwt.sign({email: findUser.email}, process.env.SECRET_TOKEN)
-  console.log("token: " , token)
+  const token = jwt.sign({ email: findUser.email }, process.env.SECRET_TOKEN)
+  console.log("token: ", token)
   res.header("token", token).send(findUser)
 });
 
-  
+
+
+
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploadImages/userProfiles')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.originalname + Date.now()) //Date.now() + if want unique name //
+  }
+})
+const upload = multer({ storage: storage })
+// const upload = multer({dest: './uploadImages/profileImages' })
+
 
 ////////////////////////// User Patch /////////////////////
-userRegistrationRoute.put("/userprofile", async(req, res) => {
-  // Profile update logic here
-  // name, email, password, address, checkbox - initial registration
-  // profilePicture, bio - additional details
-  console.log("request body: ", req.body)
-  const {userId, profilePic} = req.body;
-  console.log("proile: ", req.body.profilePic, "userId",userId)
+userRegistrationRoute.put("/userprofile", upload.single("image"), async (req, res) => {
+  const userId = req.body.userId; // Access the userId from req.body
+  const bio = req.body.bio
+  // console.log("Request body:", req.body);
+  // console.log("Profile image:", req.file);
 
-  const findUser = await UserRegist.findOne({_id: req.body.userId})
 
-  // try{
-  //   const updateData = 
+  try {
+    await UserRegist.updateOne(
+      { _id: userId },
+      {
+        $set: {
+          image: req.file.filename,
+          bio: bio
+        }
+      }
+    )
+  } catch (err) {
+    console.log("Error", err)
+  }
+  const findUser = await UserRegist.findOne({ _id: req.body.userId })
+  res.send(findUser)
 
-  // }catch(err){
 
-  // }
-  console.log(findUser)
-  res.send(req.body)
 });
+/////////////// get ////////////////////////////
+userRegistrationRoute.get(`/userprofile/`, async (req, res) => {
+  console.log("request body: ", req.query)
+  const { userId } = req.query
+  console.log(req.query.userId)
+  const userProfile = await UserRegist.findOne({ _id: userId }
+  )
+  console.log(userProfile)
+  res.send(userProfile)
+})
 
 module.exports = userRegistrationRoute;

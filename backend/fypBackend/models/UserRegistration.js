@@ -31,8 +31,13 @@ const UserRegist = new mongoose.Schema({
         type: Boolean,
         required: true
     },
-    profilePic: {
-        type: String
+    image: {
+        type: String,
+        default: ''
+    },
+    bio: {
+        type: String,
+        default: 'No Bio Available...!'
     },
     createdAt: {
         type: Date,
