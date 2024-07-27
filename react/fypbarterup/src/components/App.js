@@ -11,7 +11,7 @@ import Register from '../pages/Register'
 import Login from '../pages/Login'
 import Logout from '../pages/Logout';
 import Error from '../pages/Error'
-import Userdash from './Userdash';
+import Userdash from './UserDashboard/Userdash';
 
 import { NotificationContainer } from 'react-notifications';
 
@@ -32,8 +32,8 @@ const App = () => {
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />}/>
                     <Route path='/logout' element={<Logout />}/>
-                    <Route path='/userdash' element={<Userdash />} />
                     <Route path='*' element={<Error />}/>
+                    <Route path='/userdash/' element={<Userdash />} />
                 </Routes>
                 { <Footernav /> }
             </Router>
