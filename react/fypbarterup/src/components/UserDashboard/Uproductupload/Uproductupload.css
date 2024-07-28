@@ -3,6 +3,9 @@
     height: auto;
 }
 .pUploadImage{
-    width: 16rem;
-    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 20rem;
+    height: 14rem;
 }

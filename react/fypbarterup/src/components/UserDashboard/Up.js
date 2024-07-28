@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { useRef } from 'react'
 import defaultImage from './profile.jpg'
-
 import './Up.css'
 import axios from 'axios'
 
@@ -20,6 +19,7 @@ const Up = () => {
     useEffect(() => {
 
         if (!shouldFetch) return; // Prevent unnecessary fetches
+
 
         const userId = localStorage.getItem('_id')
         const token = localStorage.getItem("token")
@@ -54,7 +54,7 @@ const Up = () => {
     }
     const handleChange = (e) => {
         console.log(fileUploadRef.current.files[0]);
-       
+
     }
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -65,11 +65,11 @@ const Up = () => {
         console.log(bio)
         console.log(uploadFile)
         const formData = new FormData()
-        if(uploadFile) {
+        if (uploadFile) {
             formData.append("image", uploadFile)
             formData.append("userId", userId)
             formData.append("bio", bio)
-        }else{
+        } else {
             formData.append("image", userProfileImage)
             formData.append("userId", userId)
             formData.append("bio", bio)
@@ -91,11 +91,11 @@ const Up = () => {
         })
     }
     return (
-        <div className='bg-dark container d-flex justify-content-center'>
+        <div className='bg-dark container d-flex justify-content-center pt-5'>
             <div>
                 {isEditable ?
                     (
-                        <div className=''>
+                        <div className='edit-div container justify-content-center'>
                             <form onSubmit={handleSubmit}>
 
                                 <input
@@ -105,24 +105,23 @@ const Up = () => {
                                     hidden
                                 />
                                 <img
-                                    className='edit-div img img-thumbnail m-2'
-                                    src={`http://localhost:3001/uploadImages/userProfiles/${userProfileImage}` || defaultImage}
+                                    className='eidt-div-img img img-thumbnail mb-3'
+                                    src={userProfileImage === '' ? (defaultImage) : (`http://localhost:3001/uploadImages/userProfiles/${userProfileImage}`)}
                                     alt='profile'
                                     onClick={handleClick}
                                 />
-                                <h5 className='text-light m-2 p-2'>{name}</h5>
+                                <h5 className='textarea-input text-light mb-3'>{name}</h5>
                                 <textarea
-                                    className='p-2 text-center m-2'
+                                    className='text-center mb-3'
                                     type='textarea'
                                     name='bio'
                                     id='bio'
                                     rows='5'
-                                    cols='25'
                                     value={bio}
                                     onChange={(e) => { setBio(e.target.value) }}
                                 />
                                 <button
-                                    className='btn btn-outline-light form-control m-2'
+                                    className='btn btn-outline-light form-control mb-3'
                                     type='submit'
                                 >save
                                 </button>
@@ -132,12 +131,12 @@ const Up = () => {
                     (
                         <div className='edit-div'>
                             <img
-                                className='eidt-div-img img img-thumbnail m-2'
-                                src={`http://localhost:3001/uploadImages/userProfiles/${userProfileImage}` || defaultImage} alt='profile'></img>
-                            <h5 className='text-light m-2 p-2'>{name}</h5>
-                            <p className='text-light m-2 p-2'>{bio}</p>
+                                className='eidt-div-img img img-thumbnail mb-3'
+                                src={userProfileImage === '' ? (defaultImage) : (`http://localhost:3001/uploadImages/userProfiles/${userProfileImage}`)} alt='profile'></img>
+                            <h5 className='text-light mb-3'>{name}</h5>
+                            <p className='text-light mb-3'>{bio}</p>
                             <button
-                                className='btn btn-outline-light form-control m-2'
+                                className='btn btn-outline-light form-control mb-3'
                                 onClick={() => setIsEditable(true)}>
                                 Edit
                             </button>

@@ -1,15 +1,34 @@
 import React from 'react'
 import { useState, useRef } from 'react'
+import * as yup from 'yup'
 import dummyImage from '../profile.jpg'
 import './Uproductupload.css'
+import axios from 'axios'
+import {NotificationManager} from 'react-notifications'
+
 const Uproductupload = () => {
     // pName, pCategory, pDescription, pImageUrl, userId , pId by default from db
     const [pName, setPName] = useState('')
     const [pCategory, setPCategory] = useState('')
     const [pDescription, setPDescription] = useState('')
     const [pImageUrl, setPImageUrl] = useState('')
-
     const productUploadRef = useRef()
+
+    //////////////// validation schema /////////////
+    const validationSchema = yup.object({
+        pName: yup
+            .string()
+            .required("Product Name is required..!"),
+        pCategory: yup
+            .string()
+            .required("Product Category is required..!"),
+        pDescription: yup
+            .string()
+            .required('Product Description is required ..!'),
+        pImageUrl: yup
+            .string()
+            .required('Product Image is required ..!')
+    })
 
     const handleClick = (e) => {
         productUploadRef.current.click()
@@ -22,23 +41,44 @@ const Uproductupload = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         const userId = localStorage.getItem("_id")
+        const token = localStorage.getItem('token')
         const prdouctImage = productUploadRef.current.files[0]
-        
-        const formData = new FormData()
-        formData.append('productImage', prdouctImage)
-        formData.append("userId", userId)
-        formData.append("ProductName", pName)
-        formData.append("productCategory", pCategory)
-        formData.append("productDescription", pDescription)
+        const data = {pName, pCategory, pDescription, pImageUrl}
+        validationSchema.validate(data)
+            .then((valid) => {
+                const formData = new FormData()
+                formData.append('productImage', prdouctImage)
+                formData.append("userId", userId)
+                formData.append("ProductName", pName)
+                formData.append("ProductCategory", pCategory)
+                formData.append("ProductDescription", pDescription)
+                console.log(...formData)
+                console.log('Data is valid')
 
-        console.log(...formData)
+                axios.post('http://localhost:3001/api/products', formData, {
+                    headers: {
+                        token: token
+                    }
+                }).then((res) =>  {
+                    console.log(res)
+                    NotificationManager.success("Success", "Product Uploaded Successfully", 3000)
+                    setPName('')
+                    setPCategory('')
+                    setPDescription('')
+                    setPImageUrl(dummyImage)
+                }).catch((error) => {
+                    console.log("axios error", error)
+                })
+            }).catch((err) => {
+                console.log("validation Error", err)
+            })
     }
     return (
         <div>
             <h2>Upload a Product</h2>
             <div className='productUpload-div container d-flex justify-content-center align-items-center'>
                 <div className='col-md'>
-                    <form onSubmit={handleSubmit}className='form'>
+                    <form onSubmit={handleSubmit} className='form'>
                         <input
                             className='form-control'
                             type='file'
@@ -46,10 +86,10 @@ const Uproductupload = () => {
                             ref={productUploadRef}
                             hidden
                         />
-                        <div className='pUploadImage input-field mb-3 d-flex align-items-center'>
+                        <div className='input-field mb-3 d-flex align-items-center'>
                             <img
-                                className='img img-thumbnail p-2 form-control'
-                                src={pImageUrl || dummyImage} alt='product-image'
+                                className='pUploadImage img img-thumbnail p-2 form-control'
+                                src={pImageUrl || dummyImage} alt='product'
                                 onClick={handleClick}
                             />
                         </div>

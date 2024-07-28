@@ -25,7 +25,7 @@ const Login = () => {
                 localStorage.setItem("token", token)
                 localStorage.setItem("_id", res.data._id)
                 console.log(token)
-                navigate('/home')
+                navigate('/userdash/')
                 NotificationManager.success(`${res.data.name} logged in successfully!`,"Success",5000)
             }).catch((err) => {
                 // console.log(err.response.data)
