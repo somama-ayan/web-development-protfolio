@@ -36,7 +36,8 @@ const corsOption = {
 // });
 
 const userRegistrationRoute = require("./routes/userRegistration");
-app.use("/api", userRegistrationRoute);
-
+app.use("/api", userRegistrationRoute);                     
+const usersProductsRoute = require('./routes/usersProducts');
+app.use('/api/products', usersProductsRoute);
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`API running on PORT : ${PORT}`));

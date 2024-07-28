@@ -4,6 +4,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const userRegValidSchema = require("../middleware/validation");
 const multer = require("multer");
+const verifyToken = require("../middleware/verifyToken");
 
 
 ////////////////////////// User Registration /////////////////
