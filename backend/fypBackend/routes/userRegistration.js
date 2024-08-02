@@ -9,7 +9,7 @@ const verifyToken = require("../middleware/verifyToken");
 
 ////////////////////////// User Registration /////////////////
 userRegistrationRoute.post("/registration", async (req, res) => {
-  const { name, email, password, address, terms } = req.body;
+  const { name, phone, email, password, address, terms } = req.body;
 
   // Validate the request body
   const { error } = userRegValidSchema(req.body);
@@ -26,6 +26,7 @@ userRegistrationRoute.post("/registration", async (req, res) => {
   // Create a new user
   const user = new UserRegist({
     name,
+    phone,
     email,
     password: hash,
     address,

@@ -7,6 +7,9 @@ function userRegValidSchema(data) {
             .min(3)
             .max(40)
             .required(),
+            phone: Joi
+            .number()
+            .required(),
         email: Joi
             .string()
             .min(3)

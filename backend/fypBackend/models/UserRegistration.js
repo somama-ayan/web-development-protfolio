@@ -9,6 +9,10 @@ const UserRegist = new mongoose.Schema({
         max: 40,
         required: true
     },
+    phone: {
+        type: Number,
+        required: true
+    },
     email: {
         type: String,
         min: 3,

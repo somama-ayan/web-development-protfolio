@@ -2,11 +2,20 @@ const usersProductsRoute = require('express').Router();
 const multer = require('multer');
 const UserProd = require('../models/Products')
 const productValidationSchema = require('../middleware/productValidation')
-
+const verifyToken = require("../middleware/verifyToken");
 ////////// get all products ///////////////////////////////////
+
 usersProductsRoute.get('/', async(req, res) => {
     const products = await UserProd.find()
     res.send(products)
+})
+/////// get single product for product /////
+usersProductsRoute.get('/product', async(req,res) =>  {
+    const {pid} = req.query.pid
+    console.log(pid)
+    const findProduct = await UserProd.findOne({_id: req.query.pid})
+    console.log(findProduct)
+    res.send(findProduct)
 })
 //////////////////// upload a product ///////////////////
 const storage = multer.diskStorage({

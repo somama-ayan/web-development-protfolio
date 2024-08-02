@@ -17,6 +17,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))
 app.use('/uploadImages/userProfiles/', express.static(path.join(__dirname, '/uploadImages/userProfiles/')));
+app.use('/uploadImages/products/', express.static(path.join(__dirname, '/uploadImages/products/')));
 app.use(cors());
 app.use(cors({
   exposedHeaders:
