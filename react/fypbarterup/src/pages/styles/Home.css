@@ -1,24 +1,31 @@
-#hero{
+section {
+    box-shadow: -1px 1px 5px rgba(235, 235, 235, 0.75), 1px -1px 5px rgba(235, 235, 235, 0.702);
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+#hero {
     background-image: url('../images/bg6.jpg');
     background-blend-mode: darken;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 500px;
-
     padding-top: 1.2in;
     box-shadow: -1px 1px 5px rgba(235, 235, 235, 0.75), 1px -1px 5px rgba(235, 235, 235, 0.702);
     margin-bottom: 40px;
-    
+
 }
-.mainhead2{
+
+.mainhead2 {
     color: rgb(253, 253, 253);
     font-weight: 600;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 30px;
     padding-top: 10px;
-    
+
 }
-.mainhead1{
+
+.mainhead1 {
     color: rgb(253, 253, 253);
     font-weight: 600;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -26,12 +33,49 @@
     padding-top: 10px;
     padding-left: 40px;
 }
-.mainpara1{
+
+.mainpara1 {
     color: rgb(253, 253, 253);
     font-weight: 600;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
     padding-top: 10px;
-    
 
 }
+/*  section h2 all ................. */
+.ProductSection-head2 , .ContactSection-head2, .sectionHome-what-we-offer{
+    color: rgba(41, 3, 147, 0.702);
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 1rem;
+
+}
+/* Product section */
+
+.card-element-home {
+    box-shadow: -1px 1px 5px rgba(235, 235, 235, 0.75), 1px -1px 5px rgba(235, 235, 235, 0.702);
+    margin: 1rem -0.7rem;
+}
+
+.Product-image-home {
+    width: 18rem;
+    height: 18rem;
+    border: none;
+}
+
+.description-home {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+    .description-home {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 16rem;
+    }
+
+}
+/* Get in touch section */

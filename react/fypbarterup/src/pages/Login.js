@@ -10,6 +10,12 @@ import '../pages/styles/Login.css'
 import axios from 'axios'
 const Login = () => {
     const navigate = useNavigate()
+    // const tokenFound = localStorage.getItem("token")
+    // if(tokenFound){
+    //     NotificationManager.success("Already Looged In..!","",3000)
+    //     return navigate('/userdash/')
+    // }
+
     const formik = useFormik({
         initialValues: {
             email: '',

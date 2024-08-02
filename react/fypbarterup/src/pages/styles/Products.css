@@ -1,0 +1,23 @@
+.Products-img {
+    width: 18rem;
+    height: 18rem;
+}
+
+.description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card-element {
+    box-shadow: 1px 1px 10px rgb(228, 226, 226), -1px -1px 10px rgb(228, 226, 226);
+}
+
+@media screen and (max-width: 767px) {
+    .description{
+        text-overflow: hidden;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-width: 16rem;
+    }
+  }

@@ -37,6 +37,12 @@ const Headernav = () => {
                         >
                             About us
                         </Link>
+                        <Link
+                            className='text-decoration-none m-2 text-light'
+                            to='/contact'
+                        >
+                            Contact us
+                        </Link>
                     </Nav>
                     <Form>
                         <Button variant='outline-dark' className='m-2 text-light'>
@@ -49,7 +55,7 @@ const Headernav = () => {
                             <Link className='text-decoration-none text-light' to='/logout'>Log Out</Link>
                         </Button>
                         <Button variant='outline-dark' className='m-2 text-light'>
-                            <Link className='text-decoration-none text-light' to='/userdash'>User Dash</Link>
+                            <Link className='text-decoration-none text-light' to='/userdash'>Dashboard</Link>
                         </Button>
                     </Form>
 

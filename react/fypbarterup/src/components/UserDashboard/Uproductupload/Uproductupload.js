@@ -75,7 +75,7 @@ const Uproductupload = () => {
     }
     return (
         <div>
-            <h2>Upload a Product</h2>
+            <h2 className='text-center mt-3 p-3'>Upload a Product</h2>
             <div className='productUpload-div container d-flex justify-content-center align-items-center'>
                 <div className='col-md'>
                     <form onSubmit={handleSubmit} className='form'>

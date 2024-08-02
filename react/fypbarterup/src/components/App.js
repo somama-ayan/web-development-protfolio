@@ -14,6 +14,7 @@ import Error from '../pages/Error'
 import Userdash from './UserDashboard/Userdash';
 
 import { NotificationContainer } from 'react-notifications';
+import Contact from '../pages/Contact';
 
 
 const App = () => {
@@ -27,8 +28,9 @@ const App = () => {
                     <Route path='/'element={<Home />} />
                     <Route path='/home' element={<Home />} />
                     <Route path='/products' element={<Products />} />
-                    <Route path='/product: id='element={<Product />} />
+                    <Route path='/product/:id'element={<Product />} />
                     <Route path='/about'element={<About />} />
+                    <Route path='/contact' element={<Contact />} />
                     <Route path='/register' element={<Register />} />
                     <Route path='/login' element={<Login />}/>
                     <Route path='/logout' element={<Logout />}/>
