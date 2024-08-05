@@ -1,10 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { NotificationManager } from 'react-notifications'
 import { Card } from 'react-bootstrap'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import BackHand from '@mui/icons-material/BackHand';
 import './styles/Product.css'
 const Product = () => {
     const [product, setProduct] = useState([])
@@ -44,10 +45,14 @@ const Product = () => {
                                 <h2 className='product-head2'>{product.ProductName}</h2>
                                 <h5 className='product-head5'>{product.ProductCategory}</h5>
                                 <p className='product-descparah'>{product.ProductDescription}</p>
-                                <span>
-                                    <WhatsAppIcon />
-                                    <p>whattsAPP</p>
-                                </span>
+                                <Link>
+                                    <button className='whatsAPP-button btn btn-outline-dark col col-4 form-control mb-2'>
+                                        <WhatsAppIcon /> WhatsApp</button>
+                                </Link>
+                                <Link>
+                                    <button className='whatsAPP-button btn btn-outline-dark col col-4 form-control mb-2'>
+                                        Go Back</button>
+                                </Link>
                             </div>
 
                         </div>
